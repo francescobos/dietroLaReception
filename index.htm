@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dietro la Reception — Sito Ufficiale</title>
+    <meta name="description" content="Un canale autentico, ironico e utile per raccontare la vita e il lavoro dietro al bancone di una struttura turistica."
+ />
+    <meta property="og:title" content="Dietro la Reception" />
+    <meta property="og:description" content="Racconti, strumenti e consulenza per la vita vera di chi lavora in accoglienza." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/static/og-image.jpg" />
+    <link rel="icon" href="/static/favicon.ico" />
+
+    <!-- Bootstrap 5 & Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <style>
+      :root {
+        --dlr-primary: #0f766e; /* teal-700 */
+        --dlr-accent: #f59e0b;  /* amber-500 */
+        --dlr-dark: #0b1320;
+        --dlr-light: #f8fafc;
+      }
+      body { font-feature-settings: "ss01" on, "cv01" on; }
+      .bg-dlr { background: linear-gradient(135deg, var(--dlr-primary), #0ea5a4); }
+      .text-gradient { background: linear-gradient(90deg, var(--dlr-accent), #22d3ee); -webkit-background-clip: text; background-clip: text; color: transparent; }
+      .shadow-soft { box-shadow: 0 10px 30px rgba(0,0,0,.08); }
+      .badge-soft { background: rgba(245,158,11,.12); color: var(--dlr-accent); }
+      .link-list a { text-decoration: none; }
+      .timeline { position: relative; }
+      .timeline::before { content: ""; position: absolute; left: .9rem; top: 0; bottom: 0; width: 2px; background: #e9ecef; }
+      .timeline-item { position: relative; padding-left: 2.5rem; margin-bottom: 1.25rem; }
+      .timeline-item::before { content: ""; position: absolute; left: .4rem; top: .25rem; width: 1.2rem; height: 1.2rem; border-radius: 50%; background: var(--dlr-primary); border: 3px solid #fff; box-shadow: 0 0 0 2px #dceef0; }
+      .pricing-card:hover { transform: translateY(-4px); transition: .2s ease; }
+      .hero-emoji { filter: drop-shadow(0 6px 16px rgba(0,0,0,.15)); }
+    </style>
+  </head>
+  <body class="bg-light text-dark">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#home">
+          <span class="text-gradient">Dietro la Reception</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"
+          aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="#progetto">Il progetto</a></li>
+            <li class="nav-item"><a class="nav-link" href="#francesco">Chi sono</a></li>
+            <li class="nav-item"><a class="nav-link" href="#links">Dove trovarmi</a></li>
+            <li class="nav-item"><a class="nav-link" href="#newsletter">Newsletter</a></li>
+            <li class="nav-item"><a class="nav-link" href="#servizi">Servizi</a></li>
+            <li class="nav-item"><a class="nav-link" href="#timeline">Esperienze</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <header id="home" class="bg-dlr text-white py-5">
+      <div class="container py-4">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-7">
+            <span class="badge rounded-pill badge-soft mb-3">Autentico • Ironico • Utile</span>
+            <h1 class="display-5 fw-bold">La vita vera <span class="text-warning">dietro al bancone</span> 🛎️</h1>
+            <p class="lead mb-4">Storie, strumenti e consigli pratici per chi lavora in accoglienza. Un mix di intrattenimento e informazioni per far crescere numeri, reputazione e buonumore.</p>
+            <div class="d-flex gap-3">
+              <a href="#newsletter" class="btn btn-warning text-dark fw-semibold"><i class="bi bi-envelope-open"></i> Iscriviti alla newsletter</a>
+              <a href="#servizi" class="btn btn-outline-light"><i class="bi bi-briefcase"></i> Scopri i servizi</a>
+            </div>
+          </div>
+          <div class="col-lg-5 text-center">
+            <div class="ratio ratio-1x1">
+              <div class="d-flex align-items-center justify-content-center">
+                <span class="display-1 hero-emoji">🏖️📒☕</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- PROGETTO -->
+    <section id="progetto" class="py-5">
+      <div class="container">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-6">
+            <h2 class="fw-bold mb-3">Il progetto</h2>
+            <p class="fs-5">«Dietro la Reception» è il racconto del lavoro in struttura turistica visto dalla parte di chi lo fa. Tono vicino, umano ed empatico; spesso ironico, sempre concreto. L’obiettivo? Rafforzare l’immagine del brand, creare engagement e aiutarti a vendere meglio.</p>
+            <ul class="list-unstyled mt-3">
+              <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Post e guide pratiche su marketing e operations</li>
+              <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Strumenti pronti all’uso (template, checklist, script)</li>
+              <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Consulenza leggera per risultati visibili</li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <div class="card shadow-soft">
+              <div class="card-body p-4">
+                <h5 class="card-title">Il posizionamento</h5>
+                <p class="mb-0">Piccolo è bello: ogni angolo è a portata di passetto. A differenza dei villaggi “infinito-perimetro”, qui non ti perdi tra navette e chilometri — a meno che non ti piaccia camminare e camminare se ti dimentichi gli occhialini in casetta…</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHI SONO -->
+    <section id="francesco" class="py-5 bg-white">
+      <div class="container">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-5">
+            <img src="/static/francesco.jpg" class="img-fluid rounded-4 shadow-soft" alt="Francesco Boschetti" />
+          </div>
+          <div class="col-lg-7">
+            <h2 class="fw-bold mb-3">Ciao, sono Francesco (per gli amici Boss, Fra, o Francé)</h2>
+            <p class="fs-5">Due anime: marketing manager nel turismo e lead developer in una software house. Da oltre 20 anni lavoro tra comunicazione, prodotto e numeri. Nel 2012 ho guidato il marketing di un gruppo manifatturiero cresciuto da 5 a 50 persone, 3 aziende e 4 marchi. Poi ho iniziato — quasi per gioco — ad aiutare un’amica col suo Villaggio: è diventato ciò che amo.</p>
+            <div class="d-flex gap-3 mt-3">
+              <a href="#links" class="btn btn-outline-dark"><i class="bi bi-link-45deg"></i> Link & contatti</a>
+              <a href="#timeline" class="btn btn-outline-secondary"><i class="bi bi-clock-history"></i> Percorso</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LINK TREE -->
+    <section id="links" class="py-5">
+      <div class="container">
+        <h2 class="fw-bold mb-4">Dove trovarmi</h2>
+        <div class="row g-3 link-list">
+          <div class="col-12 col-md-6 col-lg-4">
+            <a class="card shadow-soft p-3 d-flex align-items-center" href="https://www.linkedin.com/in/fboschetti" target="_blank" rel="noopener">
+              <i class="bi bi-linkedin fs-2 me-3"></i>
+              <div>
+                <div class="fw-semibold">LinkedIn</div>
+                <small class="text-muted">/in/fboschetti</small>
+              </div>
+            </a>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <a class="card shadow-soft p-3 d-flex align-items-center" href="https://wa.me/393478257354" target="_blank" rel="noopener">
+              <i class="bi bi-whatsapp fs-2 me-3"></i>
+              <div>
+                <div class="fw-semibold">WhatsApp Business</div>
+                <small class="text-muted">Scrivimi un messaggio</small>
+              </div>
+            </a>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <a class="card shadow-soft p-3 d-flex align-items-center" href="https://facebook.com/" target="_blank" rel="noopener">
+              <i class="bi bi-facebook fs-2 me-3"></i>
+              <div>
+                <div class="fw-semibold">Facebook</div>
+                <small class="text-muted">Pagina Dietro la Reception</small>
+              </div>
+            </a>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <a class="card shadow-soft p-3 d-flex align-items-center" href="mailto:me@fboschetti.it">
+              <i class="bi bi-envelope fs-2 me-3"></i>
+              <div>
+                <div class="fw-semibold">Email</div>
+                <small class="text-muted">me@fboschetti.it</small>
+              </div>
+            </a>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <a class="card shadow-soft p-3 d-flex align-items-center" href="https://dietrolareception.it" target="_blank" rel="noopener">
+              <i class="bi bi-globe2 fs-2 me-3"></i>
+              <div>
+                <div class="fw-semibold">Sito</div>
+                <small class="text-muted">dietrolareception.it</small>
+              </div>
+            </a>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4">
+            <a class="card shadow-soft p-3 d-flex align-items-center" href="https://t.me/" target="_blank" rel="noopener">
+              <i class="bi bi-telegram fs-2 me-3"></i>
+              <div>
+                <div class="fw-semibold">Telegram</div>
+                <small class="text-muted">Canale / community</small>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section id="newsletter" class="py-5 bg-white">
+      <div class="container">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-6">
+            <h2 class="fw-bold mb-3">Newsletter senza fronzoli</h2>
+            <p class="fs-5">Email brevi, concrete. Un consiglio pratico, un’idea da copiare, una risorsa utile. Frequenza: quando ho qualcosa di buono da dire.</p>
+            <ul class="text-muted small">
+              <li>No spam. Mai.</li>
+              <li>Disiscrizione in un clic.</li>
+              <li>Ogni tanto un sorriso (garantito).</li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <form class="card shadow-soft" action="/api/newsletter/subscribe" method="post">
+              <div class="card-body p-4">
+                <div class="row g-3">
+                  <div class="col-12">
+                    <label class="form-label" for="name">Nome</label>
+                    <input class="form-control" id="name" name="name" placeholder="Il tuo nome" required>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label" for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="tu@esempio.it" required>
+                  </div>
+                  <!-- Honeypot anti-spam -->
+                  <div class="d-none">
+                    <label>Lascia vuoto</label>
+                    <input type="text" name="website" tabindex="-1" autocomplete="off">
+                  </div>
+                  <div class="col-12 d-grid">
+                    <button class="btn btn-dark" type="submit"><i class="bi bi-send"></i> Iscrivimi</button>
+                  </div>
+                  <div class="col-12">
+                    <small class="text-muted">Iscrivendoti accetti la privacy policy. Niente spam, parola d’onore.</small>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVIZI / OFFERTE BASE -->
+    <section id="servizi" class="py-5">
+      <div class="container">
+        <div class="d-flex align-items-end justify-content-between mb-4">
+          <h2 class="fw-bold">Servizi</h2>
+          <span class="badge rounded-pill bg-secondary">Pacchetti base</span>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="card pricing-card shadow-soft h-100">
+              <div class="card-body p-4 d-flex flex-column">
+                <h5 class="card-title">Check‑in Marketing</h5>
+                <p class="text-muted">Analisi rapida + 3 azioni ad alto impatto per il tuo sito e canali.</p>
+                <ul class="list-unstyled small flex-grow-1">
+                  <li><i class="bi bi-check2 me-2 text-success"></i>Audit sito & booking flow</li>
+                  <li><i class="bi bi-check2 me-2 text-success"></i>Calendario contenuti 30 gg</li>
+                  <li><i class="bi bi-check2 me-2 text-success"></i>Report con priorità</li>
+                </ul>
+                <div class="d-flex align-items-baseline gap-2 mt-2">
+                  <span class="h4 mb-0">€ 490</span>
+                  <small class="text-muted">+ IVA</small>
+                </div>
+                <a href="#newsletter" class="btn btn-dark mt-3">Richiedi</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card pricing-card shadow-soft h-100 border border-2 border-warning">
+              <div class="card-body p-4 d-flex flex-column">
+                <div class="mb-2"><span class="badge bg-warning text-dark">Più scelto</span></div>
+                <h5 class="card-title">Social & Community</h5>
+                <p class="text-muted">Piano editoriale, tono di voce e set di rubriche «Dietro la Reception».</p>
+                <ul class="list-unstyled small flex-grow-1">
+                  <li><i class="bi bi-check2 me-2 text-success"></i>Linee guida brand</li>
+                  <li><i class="bi bi-check2 me-2 text-success"></i>10 post pronti + template</li>
+                  <li><i class="bi bi-check2 me-2 text-success"></i>Setup gruppo/community</li>
+                </ul>
+                <div class="d-flex align-items-baseline gap-2 mt-2">
+                  <span class="h4 mb-0">€ 990</span>
+                  <small class="text-muted">+ IVA</small>
+                </div>
+                <a href="#newsletter" class="btn btn-warning text-dark mt-3">Parliamone</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card pricing-card shadow-soft h-100">
+              <div class="card-body p-4 d-flex flex-column">
+                <h5 class="card-title">Dev Sprint</h5>
+                <p class="text-muted">Un giorno di sviluppo per automazioni, dashboard o integrazioni leggere.</p>
+                <ul class="list-unstyled small flex-grow-1">
+                  <li><i class="bi bi-check2 me-2 text-success"></i>Node.js / Fastify</li>
+                  <li><i class="bi bi-check2 me-2 text-success"></i>HTMX / Tabler</li>
+                  <li><i class="bi bi-check2 me-2 text-success"></i>Setup & deploy</li>
+                </ul>
+                <div class="d-flex align-items-baseline gap-2 mt-2">
+                  <span class="h4 mb-0">€ 690</span>
+                  <small class="text-muted">+ IVA</small>
+                </div>
+                <a href="#newsletter" class="btn btn-outline-dark mt-3">Prenota uno slot</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIMELINE ESPERIENZE -->
+    <section id="timeline" class="py-5 bg-white">
+      <div class="container">
+        <h2 class="fw-bold mb-4">Timeline esperienze</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <h6 class="mb-1">2025 — Oggi</h6>
+            <p class="mb-0">Marketing nel turismo + sviluppo software: tre aziende seguite in ruoli diversi (social, consulenza, sviluppo) e una decina di clienti in manutenzione siti.</p>
+          </div>
+          <div class="timeline-item">
+            <h6 class="mb-1">2012 — 2024</h6>
+            <p class="mb-0">Direzione marketing in gruppo manifatturiero: crescita da 5 a 50 persone, 3 aziende e 4 brand. Focus su strategia, prodotto e sales enablement.</p>
+          </div>
+          <div class="timeline-item">
+            <h6 class="mb-1">2004 — 2011</h6>
+            <p class="mb-0">Agenzia digitale: internet “dell’epoca” + comunicazione. Progetti web, contenuti e prime automazioni.</p>
+          </div>
+          <div class="timeline-item">
+            <h6 class="mb-1">La svolta</h6>
+            <p class="mb-0">Aiuto un’amica col suo Villaggio turistico. Scopro che il turismo è casa: numeri, persone, storie. Nasce l’idea di «Dietro la Reception».</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINALE -->
+    <section class="py-5 text-center bg-dlr text-white">
+      <div class="container">
+        <h3 class="fw-bold mb-3">Pronti a far salire di un gradino la vostra comunità?</h3>
+        <p class="mb-4">Scrivimi per capire se e come posso aiutarti: zero burocrazia, massima chiarezza.</p>
+        <a href="mailto:me@fboschetti.it" class="btn btn-light"><i class="bi bi-envelope"></i> Contattami</a>
+      </div>
+    </section>
+
+    <footer class="py-4 bg-white border-top small">
+      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <div>© <span id="year"></span> Dietro la Reception • P.IVA 03441170366</div>
+        <div class="text-muted">Acqua bassa lontanissima, buonumore vicinissimo.</div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
