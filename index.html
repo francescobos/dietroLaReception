@@ -16,16 +16,43 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
 
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap" rel="stylesheet">
+
     <style>
       :root {
-        --dlr-primary: #0f766e; /* teal-700 */
-        --dlr-accent: #f59e0b;  /* amber-500 */
+        --dlr-primary: #fd6203; 
+        --dlr-accent: #f8fafc; 
         --dlr-dark: #0b1320;
         --dlr-light: #f8fafc;
       }
-      body { font-feature-settings: "ss01" on, "cv01" on; }
-      .bg-dlr { background: linear-gradient(135deg, var(--dlr-primary), #0ea5a4); }
-      .text-gradient { background: linear-gradient(90deg, var(--dlr-accent), #22d3ee); -webkit-background-clip: text; background-clip: text; color: transparent; }
+      body {
+        font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        font-feature-settings: "ss01" on, "cv01" on;
+        font-weight: 400;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        font-weight: 700;
+        font-family: "Bricolage Grotesque", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+        font-variation-settings:
+          "wdth" 100;
+      }
+      .btn, .nav-link, .badge {
+        font-family: "Bricolage Grotesque", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-style: normal;
+        font-variation-settings:
+          "wdth" 100;
+      }
+      .bg-dlr { background: linear-gradient(135deg, var(--dlr-primary), #fd6203); }
+      .text-gradient { background: linear-gradient(90deg, var(--dlr-accent), #fd6203); -webkit-background-clip: text; background-clip: text; color: transparent; }
       .shadow-soft { box-shadow: 0 10px 30px rgba(0,0,0,.08); }
       .badge-soft { background: rgba(245,158,11,.12); color: var(--dlr-accent); }
       .link-list a { text-decoration: none; }
@@ -35,6 +62,29 @@
       .timeline-item::before { content: ""; position: absolute; left: .4rem; top: .25rem; width: 1.2rem; height: 1.2rem; border-radius: 50%; background: var(--dlr-primary); border: 3px solid #fff; box-shadow: 0 0 0 2px #dceef0; }
       .pricing-card:hover { transform: translateY(-4px); transition: .2s ease; }
       .hero-emoji { filter: drop-shadow(0 6px 16px rgba(0,0,0,.15)); }
+      .btn-outline-light:hover {color: var(--dlr-dark) !important;}
+      .text-success { color: #fd6203 !important;}
+      .bg-warning { background-color: #fd6203 !important; color: #fff !important;}
+      .btn-warning { 
+        --bs-btn-color: #fff !important;
+        --bs-btn-bg: #fd6203 !important;
+        --bs-btn-border-color: #fd6203 !important;
+        --bs-btn-hover-color: #fff !important; 
+        --bs-btn-hover-bg: #fd6203 !important;
+        --bs-btn-hover-border-color: #fd6203 !important;
+        --bs-btn-focus-shadow-rgb: 217, 164, 6;
+        --bs-btn-active-color: #fff;
+        --bs-btn-active-bg: #fd6203 !important;
+        --bs-btn-active-border-color: #fd6203 !important; 
+        --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+        --bs-btn-disabled-color: #fff;
+        --bs-btn-disabled-bg: #fd6203 !important;
+        --bs-btn-disabled-border-color: #fd6203 !important;
+        color: #fff !important;
+      }
+      .border-warning {
+        border-color: #fd6203 !important;
+      }
     </style>
   </head>
   <body class="bg-light text-dark">
@@ -42,7 +92,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
       <div class="container">
         <a class="navbar-brand fw-bold" href="#home">
-          <span class="text-gradient">Dietro la Reception</span>
+          <span class="text-gradient"><img src="img/logo.png"></span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"
           aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,11 +100,11 @@
         </button>
         <div class="collapse navbar-collapse" id="nav">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link" href="#progetto">Il progetto</a></li>
+            <li class="nav-item"><a class="nav-link" href="#progetto">Progetto</a></li>
             <li class="nav-item"><a class="nav-link" href="#francesco">Chi sono</a></li>
             <li class="nav-item"><a class="nav-link" href="#links">Dove trovarmi</a></li>
             <li class="nav-item"><a class="nav-link" href="#newsletter">Newsletter</a></li>
-            <li class="nav-item"><a class="nav-link" href="#servizi">Servizi</a></li>
+            <li class="nav-item"><a class="nav-link" href="#servizi">Iniziamo a fare?</a></li>
             <li class="nav-item"><a class="nav-link" href="#timeline">Esperienze</a></li>
           </ul>
         </div>
@@ -65,19 +115,18 @@
     <header id="home" class="bg-dlr text-white py-5">
       <div class="container py-4">
         <div class="row align-items-center g-4">
-          <div class="col-lg-7">
-            <span class="badge rounded-pill badge-soft mb-3">Autentico • Ironico • Utile</span>
-            <h1 class="display-5 fw-bold">La vita vera <span class="text-warning">dietro al bancone</span> 🛎️</h1>
-            <p class="lead mb-4">Storie, strumenti e consigli pratici per chi lavora in accoglienza. Un mix di intrattenimento e informazioni per far crescere numeri, reputazione e buonumore.</p>
+          <div class="col-lg-8">
+            <h1 class="display-5 fw-bold">Tattiche di Marketing per le strutture ricettive</h1>
+            <p class="lead mb-4">Storie, strumenti e consigli pratici per chi lavora in accoglienza.<br />Un mix di informazioni e consigli pratici per far crescere numeri e reputazione con la promessa di... non prendersi troppo sul serio!</p>
             <div class="d-flex gap-3">
-              <a href="#newsletter" class="btn btn-warning text-dark fw-semibold"><i class="bi bi-envelope-open"></i> Iscriviti alla newsletter</a>
-              <a href="#servizi" class="btn btn-outline-light"><i class="bi bi-briefcase"></i> Scopri i servizi</a>
+              <a href="#servizi" class="btn btn-light"><i class="bi bi-briefcase"></i> Vuoi già fare?</a>
+              <a href="#newsletter" class="btn btn-outline-light text-light fw-semibold"><i class="bi bi-envelope-open"></i> Iscriviti alla newsletter</a>
             </div>
           </div>
-          <div class="col-lg-5 text-center">
+          <div class="col-lg-4 text-center">
             <div class="ratio ratio-1x1">
               <div class="d-flex align-items-center justify-content-center">
-                <span class="display-1 hero-emoji">🏖️📒☕</span>
+                <span class="display-1 hero-emoji"></span>
               </div>
             </div>
           </div>
@@ -91,18 +140,18 @@
         <div class="row g-4 align-items-center">
           <div class="col-lg-6">
             <h2 class="fw-bold mb-3">Il progetto</h2>
-            <p class="fs-5">«Dietro la Reception» è il racconto del lavoro in struttura turistica visto dalla parte di chi lo fa. Tono vicino, umano ed empatico; spesso ironico, sempre concreto. L’obiettivo? Rafforzare l’immagine del brand, creare engagement e aiutarti a vendere meglio.</p>
-            <ul class="list-unstyled mt-3">
-              <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Post e guide pratiche su marketing e operations</li>
-              <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Strumenti pronti all’uso (template, checklist, script)</li>
-              <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Consulenza leggera per risultati visibili</li>
-            </ul>
+            <p class="fs-5">«<b>Dietro la Reception</b>» è il racconto del lavoro in struttura turistica visto dagli occhi di un <b>marketer</b>. Un po' di tecnica, pochi paroloni, a volte un po' di ironia, ma sempre <b>tanta, tanta concretezza</b>! L’obiettivo? Rafforzare l’immagine della struttura, creare engagement e aiutarti a riempire ogni spazio disponibile!</p>
           </div>
           <div class="col-lg-6">
             <div class="card shadow-soft">
               <div class="card-body p-4">
-                <h5 class="card-title">Il posizionamento</h5>
-                <p class="mb-0">Piccolo è bello: ogni angolo è a portata di passetto. A differenza dei villaggi “infinito-perimetro”, qui non ti perdi tra navette e chilometri — a meno che non ti piaccia camminare e camminare se ti dimentichi gli occhialini in casetta…</p>
+                <h5 class="card-title">Le promesse</h5>
+                <ul class="list-unstyled mt-3">
+                  <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Affidabilità, concretezza, senso pratico</li>
+                  <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Post e guide pratiche su marketing e operations</li>
+                  <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Strumenti pronti all’uso (template, checklist, script)</li>
+                  <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Consulenza leggera per risultati visibili</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -115,11 +164,11 @@
       <div class="container">
         <div class="row g-4 align-items-center">
           <div class="col-lg-5">
-            <img src="/static/francesco.jpg" class="img-fluid rounded-4 shadow-soft" alt="Francesco Boschetti" />
+            <img src="/img/FraDietro.jpg" class="img-fluid rounded-4 shadow-soft" alt="Francesco Boschetti" />
           </div>
           <div class="col-lg-7">
-            <h2 class="fw-bold mb-3">Ciao, sono Francesco (per gli amici Boss, Fra, o Francé)</h2>
-            <p class="fs-5">Due anime: marketing manager nel turismo e lead developer in una software house. Da oltre 20 anni lavoro tra comunicazione, prodotto e numeri. Nel 2012 ho guidato il marketing di un gruppo manifatturiero cresciuto da 5 a 50 persone, 3 aziende e 4 marchi. Poi ho iniziato — quasi per gioco — ad aiutare un’amica col suo Villaggio: è diventato ciò che amo.</p>
+            <h2 class="fw-bold mb-3">Ciao, sono Francesco...</h2>
+            <p class="fs-5">... nel Villaggio abruzzese che seguo da 6 stagioni, <b>Francé</b>. <br />Ho iniziato ad unire <b>internet e comunicazione nel 2001</b>, ormai 25 anni fa. Prima competenze tecniche, poi mi sono buttato a capofitto nella <b>direzione del marketing di un piccolo gruppo manifatturiero</b>. Per gioco <b>un'amica mi coivolse nei numeri del suo Villaggio Turistico</b> ed è diventato ciò che amo fare. <br />Dopo vent’anni mi è tornata la voglia di vivere l'agenzia: conoscere tante situazioni differenti ed aiutare più persone a migliorare le loro strutture...e <b>mi piace ancora il software</b>... scriverlo e farlo girare... il mio vezzo.<br /><b>Ah!</b> Anche <b>mia moglie</b> lavora in hotel!</p>
             <div class="d-flex gap-3 mt-3">
               <a href="#links" class="btn btn-outline-dark"><i class="bi bi-link-45deg"></i> Link & contatti</a>
               <a href="#timeline" class="btn btn-outline-secondary"><i class="bi bi-clock-history"></i> Percorso</a>
@@ -135,60 +184,65 @@
         <h2 class="fw-bold mb-4">Dove trovarmi</h2>
         <div class="row g-3 link-list">
           <div class="col-12 col-md-6 col-lg-4">
-            <a class="card shadow-soft p-3 d-flex align-items-center" href="https://www.linkedin.com/in/fboschetti" target="_blank" rel="noopener">
-              <i class="bi bi-linkedin fs-2 me-3"></i>
-              <div>
-                <div class="fw-semibold">LinkedIn</div>
-                <small class="text-muted">/in/fboschetti</small>
+            <div class="card text-center">
+              <div class="card-body">
+               <a class="shadow-soft text-dark" href="https://www.linkedin.com/in/fboschetti" target="_blank" rel="noopener">
+                 &nbsp;&nbsp;&nbsp;<i class="bi bi-facebook fs-2 me-3"></i>
+                <div>
+                  <div class="fw-semibold">Facebook</div>
+                </div>
+               </a>
               </div>
-            </a>
+            </div>
           </div>
           <div class="col-12 col-md-6 col-lg-4">
-            <a class="card shadow-soft p-3 d-flex align-items-center" href="https://wa.me/393478257354" target="_blank" rel="noopener">
-              <i class="bi bi-whatsapp fs-2 me-3"></i>
-              <div>
-                <div class="fw-semibold">WhatsApp Business</div>
-                <small class="text-muted">Scrivimi un messaggio</small>
+            <div class="card text-center">
+              <div class="card-body">
+               <a class="shadow-soft text-dark" href="https://www.linkedin.com/in/fboschetti" target="_blank" rel="noopener">
+                 &nbsp;&nbsp;&nbsp;<i class="bi bi-instagram fs-2 me-3"></i>
+                <div>
+                  <div class="fw-semibold">Instagram</div>
+                </div>
+               </a>
               </div>
-            </a>
+            </div>
           </div>
           <div class="col-12 col-md-6 col-lg-4">
-            <a class="card shadow-soft p-3 d-flex align-items-center" href="https://facebook.com/" target="_blank" rel="noopener">
-              <i class="bi bi-facebook fs-2 me-3"></i>
-              <div>
-                <div class="fw-semibold">Facebook</div>
-                <small class="text-muted">Pagina Dietro la Reception</small>
+            <div class="card text-center">
+              <div class="card-body">
+               <a class="shadow-soft text-dark" href="https://www.linkedin.com/in/fboschetti" target="_blank" rel="noopener">
+                 &nbsp;&nbsp;&nbsp;<i class="bi bi-whatsapp fs-2 me-3"></i>
+                <div>
+                  <div class="fw-semibold">WhatsApp Business</div>
+                </div>
+               </a>
               </div>
-            </a>
+            </div>
           </div>
           <div class="col-12 col-md-6 col-lg-4">
-            <a class="card shadow-soft p-3 d-flex align-items-center" href="mailto:me@fboschetti.it">
-              <i class="bi bi-envelope fs-2 me-3"></i>
-              <div>
-                <div class="fw-semibold">Email</div>
-                <small class="text-muted">me@fboschetti.it</small>
+            <div class="card text-center">
+              <div class="card-body">
+               <a class="shadow-soft text-dark" href="https://www.linkedin.com/in/fboschetti" target="_blank" rel="noopener">
+                 &nbsp;&nbsp;&nbsp;<i class="bi bi-envelope fs-2 me-3"></i>
+                <div>
+                  <div class="fw-semibold">Email</div>
+                </div>
+               </a>
               </div>
-            </a>
+            </div>
           </div>
           <div class="col-12 col-md-6 col-lg-4">
-            <a class="card shadow-soft p-3 d-flex align-items-center" href="https://dietrolareception.it" target="_blank" rel="noopener">
-              <i class="bi bi-globe2 fs-2 me-3"></i>
-              <div>
-                <div class="fw-semibold">Sito</div>
-                <small class="text-muted">dietrolareception.it</small>
+            <div class="card text-center">
+              <div class="card-body">
+               <a class="shadow-soft text-dark" href="https://www.linkedin.com/in/fboschetti" target="_blank" rel="noopener">
+                 &nbsp;&nbsp;&nbsp;<i class="bi bi-linkedin fs-2 me-3"></i>
+                <div>
+                  <div class="fw-semibold">LinkedIn</div>
+                </div>
+               </a>
               </div>
-            </a>
+            </div>
           </div>
-          <div class="col-12 col-md-6 col-lg-4">
-            <a class="card shadow-soft p-3 d-flex align-items-center" href="https://t.me/" target="_blank" rel="noopener">
-              <i class="bi bi-telegram fs-2 me-3"></i>
-              <div>
-                <div class="fw-semibold">Telegram</div>
-                <small class="text-muted">Canale / community</small>
-              </div>
-            </a>
-          </div>
-        </div>
       </div>
     </section>
 
@@ -198,12 +252,12 @@
         <div class="row g-4 align-items-center">
           <div class="col-lg-6">
             <h2 class="fw-bold mb-3">Newsletter senza fronzoli</h2>
-            <p class="fs-5">Email brevi, concrete. Un consiglio pratico, un’idea da copiare, una risorsa utile. Frequenza: quando ho qualcosa di buono da dire.</p>
-            <ul class="text-muted small">
+            <p class="fs-5"><b>Come te lavoro, tutti giorni.</b> Mi piace mettermi alla scrivania, alla sera, a scrivere qualcosa ma il tempo è quello che è. <b>Non ti manderò una mail al giorno</b> con novità scintillanti da comprare. <b>Ti scriverò email brevi, concrete</b>. Un consiglio pratico, un’idea da copiare, una risorsa utile. <b>Frequenza:</b> quando ho qualcosa di buono da dire ed il tempo per metterlo in fila!</p>
+            <!-- <ul class="text-bold fs-6">
               <li>No spam. Mai.</li>
               <li>Disiscrizione in un clic.</li>
               <li>Ogni tanto un sorriso (garantito).</li>
-            </ul>
+            </ul> -->
           </div>
           <div class="col-lg-6">
             <form class="card shadow-soft" action="/api/newsletter/subscribe" method="post">
@@ -240,23 +294,23 @@
     <section id="servizi" class="py-5">
       <div class="container">
         <div class="d-flex align-items-end justify-content-between mb-4">
-          <h2 class="fw-bold">Servizi</h2>
-          <span class="badge rounded-pill bg-secondary">Pacchetti base</span>
+          <h2 class="fw-bold">Iniziamo a FARE insieme</h2>
+          <span class="badge rounded-pill bg-secondary">Per conoscerci</span>
         </div>
         <div class="row g-4">
           <div class="col-md-6 col-lg-4">
             <div class="card pricing-card shadow-soft h-100">
               <div class="card-body p-4 d-flex flex-column">
-                <h5 class="card-title">Check‑in Marketing</h5>
-                <p class="text-muted">Analisi rapida + 3 azioni ad alto impatto per il tuo sito e canali.</p>
+                <h5 class="card-title">The Little Digital Check-up</h5>
+                <p class="text-muted">Analisi di quello che si vede "da fuori"</p>
                 <ul class="list-unstyled small flex-grow-1">
-                  <li><i class="bi bi-check2 me-2 text-success"></i>Audit sito & booking flow</li>
-                  <li><i class="bi bi-check2 me-2 text-success"></i>Calendario contenuti 30 gg</li>
-                  <li><i class="bi bi-check2 me-2 text-success"></i>Report con priorità</li>
+                  <li><i class="bi bi-check2 me-2 text-success"></i>Audit sito internet</li>
+                  <li><i class="bi bi-check2 me-2 text-success"></i>Audit dei canali social</li>
+                  <li><i class="bi bi-check2 me-2 text-success"></i>Audit sistema di prenotazione</li>
                 </ul>
                 <div class="d-flex align-items-baseline gap-2 mt-2">
-                  <span class="h4 mb-0">€ 490</span>
-                  <small class="text-muted">+ IVA</small>
+                  <span class="h4 mb-0">GRATIS</span>
+                  <!-- <small class="text-muted">+ IVA</small> -->
                 </div>
                 <a href="#newsletter" class="btn btn-dark mt-3">Richiedi</a>
               </div>
@@ -266,15 +320,17 @@
             <div class="card pricing-card shadow-soft h-100 border border-2 border-warning">
               <div class="card-body p-4 d-flex flex-column">
                 <div class="mb-2"><span class="badge bg-warning text-dark">Più scelto</span></div>
-                <h5 class="card-title">Social & Community</h5>
-                <p class="text-muted">Piano editoriale, tono di voce e set di rubriche «Dietro la Reception».</p>
+                <h5 class="card-title">Social Checkup</h5>
+                <p class="text-muted">Andiamo a fondo su come usi i social network</p>
                 <ul class="list-unstyled small flex-grow-1">
-                  <li><i class="bi bi-check2 me-2 text-success"></i>Linee guida brand</li>
-                  <li><i class="bi bi-check2 me-2 text-success"></i>10 post pronti + template</li>
-                  <li><i class="bi bi-check2 me-2 text-success"></i>Setup gruppo/community</li>
+                  <li><i class="bi bi-check2 me-2 text-success"></i>Intervista</li>
+                  <li><i class="bi bi-check2 me-2 text-success"></i>Audit canali social</li>
+                  <li><i class="bi bi-check2 me-2 text-success"></i>Audit advertising</li>
+                  <li><i class="bi bi-check2 me-2 text-success"></i>Concorrenza</li>
+                  <li><i class="bi bi-check2 me-2 text-success"></i>Advertising della concorrenza</li>
                 </ul>
                 <div class="d-flex align-items-baseline gap-2 mt-2">
-                  <span class="h4 mb-0">€ 990</span>
+                  <span class="h4 mb-0">€ ____,00</span>
                   <small class="text-muted">+ IVA</small>
                 </div>
                 <a href="#newsletter" class="btn btn-warning text-dark mt-3">Parliamone</a>
@@ -284,15 +340,18 @@
           <div class="col-md-6 col-lg-4">
             <div class="card pricing-card shadow-soft h-100">
               <div class="card-body p-4 d-flex flex-column">
-                <h5 class="card-title">Dev Sprint</h5>
-                <p class="text-muted">Un giorno di sviluppo per automazioni, dashboard o integrazioni leggere.</p>
+                <h5 class="card-title">Digital Check-up</h5>
+                <p class="text-muted">Non solo social... </p>
                 <ul class="list-unstyled small flex-grow-1">
-                  <li><i class="bi bi-check2 me-2 text-success"></i>Node.js / Fastify</li>
-                  <li><i class="bi bi-check2 me-2 text-success"></i>HTMX / Tabler</li>
-                  <li><i class="bi bi-check2 me-2 text-success"></i>Setup & deploy</li>
+                  <li><i class="bi bi-check2 me-2 text-success"></i>Intervista... densa</li>
+                  <li><i class="bi bi-check2 me-2 text-success"></i>Quanto dipendi dal fornitore del sito</li>
+                  <li><i class="bi bi-check2 me-2 text-success"></i>Social Checkup</li>
+                  <li><i class="bi bi-check2 me-2 text-success"></i>Newsletter Checkup</li>
+                  <li><i class="bi bi-check2 me-2 text-success"></i>OTA Checkup</li>
+                  <li><i class="bi bi-check2 me-2 text-success"></i>Google My Business & Tripadvisor</li>
                 </ul>
                 <div class="d-flex align-items-baseline gap-2 mt-2">
-                  <span class="h4 mb-0">€ 690</span>
+                  <span class="h4 mb-0">€ ____,00</span>
                   <small class="text-muted">+ IVA</small>
                 </div>
                 <a href="#newsletter" class="btn btn-outline-dark mt-3">Prenota uno slot</a>
@@ -300,6 +359,24 @@
             </div>
           </div>
         </div>
+        <div class="row mt-1">
+          <div class="col">
+            <div class="p-4 bg-light rounded shadow-sm">
+              <h5 class="fw-bold mb-3"><i class="bi bi-stars text-warning fs-3 me-2"></i> E in più...</h5>
+              <p class="mb-2">
+                Ci sono due ulteriori pacchetti: <strong>SELLING CHECK-UP</strong> e <strong>GENERAL CHECK-UP</strong>.
+              </p>
+              <ul class="mb-3">
+                <li><strong>SELLING CHECK-UP</strong>: entra in profondità nel sistema di vendita, come vendi, come fai follow-up, quanto dipendi dalle OTA, ecc.</li>
+                <li><strong>GENERAL CHECK-UP</strong>: prende in considerazione un po' il tutto, compreso ciò che avviene fuori dal digitale.</li>
+              </ul>
+              <p class="mb-0">
+                Questi pacchetti <b>richiedono la condivisione di dati sensibili</b> riguardo a numeri, fatturato e tipologia di clienti.  
+                Di solito sono check-up che si accordano dopo un periodo di reciproca conoscenze e fiducia.
+              </p>
+            </div>
+          </div>
+      </div>
       </div>
     </section>
 
@@ -310,19 +387,27 @@
         <div class="timeline">
           <div class="timeline-item">
             <h6 class="mb-1">2025 — Oggi</h6>
-            <p class="mb-0">Marketing nel turismo + sviluppo software: tre aziende seguite in ruoli diversi (social, consulenza, sviluppo) e una decina di clienti in manutenzione siti.</p>
+            <p class="mb-0"><b>AGM STUDIO</b>: Voce del Brand "Dietro la reception" - Supporto alle consulenze di marketing - Coadiuvante alle tattiche di marketing.</p>
           </div>
           <div class="timeline-item">
-            <h6 class="mb-1">2012 — 2024</h6>
-            <p class="mb-0">Direzione marketing in gruppo manifatturiero: crescita da 5 a 50 persone, 3 aziende e 4 brand. Focus su strategia, prodotto e sales enablement.</p>
+            <h6 class="mb-1">2018 — 2025</h6>
+            <p class="mb-0"><b>VILLAGGIO TURISTICO EUROPA</b>: Marketing Manager</p>
           </div>
           <div class="timeline-item">
-            <h6 class="mb-1">2004 — 2011</h6>
-            <p class="mb-0">Agenzia digitale: internet “dell’epoca” + comunicazione. Progetti web, contenuti e prime automazioni.</p>
+            <h6 class="mb-1">2018 — 2021</h6>
+            <p class="mb-0"><b>PROXERA</b>: Marketing Manager</p>
           </div>
           <div class="timeline-item">
-            <h6 class="mb-1">La svolta</h6>
-            <p class="mb-0">Aiuto un’amica col suo Villaggio turistico. Scopro che il turismo è casa: numeri, persone, storie. Nasce l’idea di «Dietro la Reception».</p>
+            <h6 class="mb-1">2012 — 2021</h6>
+            <p class="mb-0"><b>GRUPPO ZARE</b>: Marketing Manager</p>
+          </div>
+          <div class="timeline-item">
+            <h6 class="mb-1">2005 — 2012</h6>
+            <p class="mb-0"><B>FREELANCE</B>: Sistemista e sviluppatore web</p>
+          </div>
+          <div class="timeline-item">
+            <h6 class="mb-1">2001 — 2004</h6>
+            <p class="mb-0"><B>FREEWAVE</B>: Co-Fondatore, creazione siti web</p>
           </div>
         </div>
       </div>
@@ -331,16 +416,16 @@
     <!-- CTA FINALE -->
     <section class="py-5 text-center bg-dlr text-white">
       <div class="container">
-        <h3 class="fw-bold mb-3">Pronti a far salire di un gradino la vostra comunità?</h3>
-        <p class="mb-4">Scrivimi per capire se e come posso aiutarti: zero burocrazia, massima chiarezza.</p>
+        <h3 class="fw-bold mb-3">I CONSIGLI non sono consulenze e sono SEMPRE GRATIS.</h3>
+        <p class="mb-4"> Se hai un dubbio CONTATTAMI e CHIEDI, <span style="border-bottom: 1px solid white;">non costa nulla</span></p>
         <a href="mailto:me@fboschetti.it" class="btn btn-light"><i class="bi bi-envelope"></i> Contattami</a>
       </div>
     </section>
 
     <footer class="py-4 bg-white border-top small">
-      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
-        <div>© <span id="year"></span> Dietro la Reception • P.IVA 03441170366</div>
-        <div class="text-muted">Acqua bassa lontanissima, buonumore vicinissimo.</div>
+      <div class="container d-flex flex-column flex-md-row justify-content-center align-items-center gap-2">
+        <div class="small text-muted">Copyright © 2025 Dietro la reception™ è un marchio depositato concesso in esclusiva ad AGM SRLS, via Statale n.142/b 42013 Casalgrande (RE) - P.IVA e Cod.Fisc. IT03084840358 </div>
+        <!-- <div class="text-muted">Acqua bassa lontanissima, buonumore vicinissimo.</div> -->
       </div>
     </footer>
 
